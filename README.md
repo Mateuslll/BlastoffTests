@@ -1,4 +1,7 @@
 # flutter_app
+Obs: Além do aplicação com todas as outras questões, as outras questões de logica estao denominadas como
+primeira, segunda, terceira e sexta questão !
+
 
 A new Flutter project.
 
