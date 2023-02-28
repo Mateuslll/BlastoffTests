@@ -1,0 +1,23 @@
+import 'dart:io';
+
+void main() {
+  // Solicita o número ao usuário
+  print("Digite um número entre 0 e 9999:");
+  int numero = int.parse(stdin.readLineSync()!);
+
+  // Separa os dígitos do número
+  int milhar = (numero ~/ 1000) % 10;
+  int centena = (numero ~/ 100) % 10;
+  int dezena = (numero ~/ 10) % 10;
+  int unidade = numero % 10;
+
+  // Mostra os dígitos separados
+  print("$milhar milhar(es), $centena centena(s), $dezena dezena(s) e $unidade unidade(s).");
+}
+
+Explicação do algoritmo:
+
+Primeiro, o programa solicita ao usuário que digite um número entre 0 e 9999.
+Em seguida, o número é lido usando a função readLineSync() da biblioteca dart:io e convertido para um inteiro usando a função int.parse().
+Os dígitos do número são separados usando operações de divisão inteira e módulo. Por exemplo, a expressão numero ~/ 1000 calcula o número de milhares no número, enquanto a expressão numero % 10 calcula a unidade do número.
+Finalmente, os dígitos separados são mostrados na tela usando a função print(). A mensagem exibe cada dígito com uma descrição apropriada.
