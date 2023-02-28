@@ -1,0 +1,32 @@
+//Questão 3:
+
+import 'dart:io';
+
+void main() {
+  // Solicita ao usuário que escolha a escala de temperatura
+  print('Escolha a escala de temperatura:');
+  print('1 - Celsius');
+  print('2 - Fahrenheit');
+  int escala = int.parse(stdin.readLineSync());
+
+  // Solicita ao usuário a temperatura a ser convertida
+  print('Digite a temperatura:');
+  double temperatura = double.parse(stdin.readLineSync());
+
+  if (escala == 1) {
+    // Converte de Celsius para Fahrenheit
+    double fahrenheit = (temperatura * 9/5) + 32;
+    print('${temperatura} oC = ${fahrenheit} oF');
+  } else if (escala == 2) {
+    // Converte de Fahrenheit para Celsius
+    double celsius = (temperatura - 32) * 5/9;
+    print('${temperatura} oF = ${celsius} oC');
+  } else {
+    print('Opção inválida!');
+  }
+}
+
+Neste exemplo, utilizamos a função readLineSync() da biblioteca dart:io para ler a entrada do usuário a partir do console. Em seguida, utilizamos a estrutura de controle if-else para verificar a escolha do usuário e efetuar a conversão de temperatura conforme as fórmulas:
+Celsius para Fahrenheit: ºF = (ºC * 9/5) + 32
+Fahrenheit para Celsius: ºC = (ºF - 32) * 5/9
+Por fim, utilizamos a função print() para exibir o resultado da conversão na tela.
