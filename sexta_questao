@@ -1,0 +1,26 @@
+import 'dart:io';
+
+void main() {
+  print('Digite o comprimento da primeira reta:');
+  double a = double.parse(stdin.readLineSync()!);
+
+  print('Digite o comprimento da segunda reta:');
+  double b = double.parse(stdin.readLineSync()!);
+
+  print('Digite o comprimento da terceira reta:');
+  double c = double.parse(stdin.readLineSync()!);
+
+  if ((a < b + c) && (b < a + c) && (c < a + b) && (a > (b - c).abs()) && (b > (a - c).abs()) && (c > (a - b).abs())) {
+    print('Os comprimentos informados podem formar um triângulo.');
+  } else {
+    print('Os comprimentos informados não podem formar um triângulo.');
+  }
+}
+
+Explicação:
+
+O algoritmo começa lendo os comprimentos das três retas através da entrada padrão usando o objeto stdin. Em seguida, ele verifica se todas as condições de existência de um triângulo são atendidas.
+
+Essas condições incluem verificar se cada lado é menor do que a soma dos outros dois lados, e se cada lado é maior do que a diferença entre os outros dois lados. Isso garante que as três retas possam ser conectadas para formar um triângulo válido.
+
+Se todas as condições forem satisfeitas, o algoritmo imprime a mensagem "Os comprimentos informados podem formar um triângulo.". Caso contrário, ele imprime a mensagem "Os comprimentos informados não podem formar um triângulo.".
