@@ -1,0 +1,25 @@
+import 'dart:io';
+
+void main() {
+  // Lê o nome completo da pessoa
+  print('Digite seu nome completo:');
+  String nomeCompleto = stdin.readLineSync()!;
+  
+  // Nome com todas as letras maiúsculas
+  print('Nome com todas as letras maiúsculas: ${nomeCompleto.toUpperCase()}');
+  
+  // Nome com todas as letras minúsculas
+  print('Nome com todas as letras minúsculas: ${nomeCompleto.toLowerCase()}');
+  
+  // Quantidade de letras ao todo (sem considerar espaços)
+  int qtdeLetras = nomeCompleto.replaceAll(' ', '').length;
+  print('Quantidade de letras ao todo (sem considerar espaços): $qtdeLetras');
+  
+  // Quantidade de letras do primeiro nome
+  int qtdeLetrasPrimeiroNome = nomeCompleto.split(' ')[0].length;
+  print('Quantidade de letras do primeiro nome: $qtdeLetrasPrimeiroNome');
+}
+
+Esse algoritmo utiliza a função readLineSync() da biblioteca dart:io para ler o nome completo da pessoa a partir do terminal. Em seguida, utiliza os métodos toUpperCase() e toLowerCase() para exibir o nome completo com todas as letras maiúsculas e minúsculas, respectivamente. 
+Para calcular a quantidade de letras ao todo, o algoritmo utiliza o método replaceAll() para remover os espaços em branco do nome completo e, em seguida, a propriedade length para obter a quantidade de letras. 
+Para calcular a quantidade de letras do primeiro nome, o algoritmo utiliza o método split() para dividir o nome completo em um array de strings, utilizando o espaço em branco como delimitador, e, em seguida, a propriedade length para obter a quantidade de letras do primeiro elemento desse array.
